@@ -331,7 +331,7 @@ VHDL coding guidelines
                             -- avalon streaming source
                             avl_ready : in std_logic;
                             avl_valid : out std_logic;
-                            avl_data  : out std_logic_vector(7 downto 0);
+                            avl_data  : out std_logic_vector(7 downto 0)
                         );
                     end module;
 ==============  ==============================================================================================
@@ -402,11 +402,25 @@ VHDL coding guidelines
 ==============  ==============================================================================================
      **Номер**  1.20
 --------------  ----------------------------------------------------------------------------------------------
-  **Описание**  **Наименование инстансов компонентов. Нужно описание! Не готово**
+  **Описание**  При инициализации экземпляра |component| используйте следующие правила:
+                    * используйте префикс **i_**
+                    * дублируйте название или сокращайте его, если оно чрезмерно длинное
+                    * используйте постфикс **_number** с номером экземпляра компонента тогда, 
+                      когда и их инициализируете больше одного
+
+                    | **i\_** *component_name* [**_number**]
 --------------  ----------------------------------------------------------------------------------------------
     **Пример**  .. code:: vhdl
 
-                    None
+                    i_fir_0 : fir 
+                    port map(
+                        -- ...
+                    );
+                    
+                    i_fir_1 : fir 
+                    port map(
+                        -- ...
+                    );
 ==============  ==============================================================================================
 
 
@@ -445,16 +459,18 @@ VHDL coding guidelines
 
 .. |configuration| replace:: *configuration*
 
-.. |package| replace:: *package* 
+.. |package| replace:: *package*
 
-.. |function| replace:: *function* 
+.. |component| replace:: *component*
 
-.. |process| replace:: *process* 
+.. |function| replace:: *function*
 
-.. |procedure| replace:: *procedure* 
+.. |process| replace:: *process*
 
-.. |genetic map| replace:: *genetic map* 
+.. |procedure| replace:: *procedure*
 
-.. |port map| replace:: *port map* 
+.. |genetic map| replace:: *genetic map*
+
+.. |port map| replace:: *port map*
 
 .. Вспомогательные конструкции
