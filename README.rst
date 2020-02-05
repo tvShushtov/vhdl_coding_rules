@@ -441,10 +441,9 @@ VHDL coding guidelines
 ==============  ==============================================================================================
      **Номер**  2.2
 --------------  ----------------------------------------------------------------------------------------------
-  **Описание**      * Используйте **std_logic** и **std_logic_vector** вместо **std_ulogic** и 
-                **std_ulogic_vector** соответственно.
-                    * Используйте **std_logic** и **std_logic_vector** вместо **bit** и 
-                **bit_vector** соответственно.
+  **Описание**  * Используйте |std_logic| и |std_logic_vector| вместо |std_ulogic| и |std_ulogic_vector| 
+                  соответственно.
+                * Используйте |std_logic| и |std_logic_vector| вместо |bit| и |bit_vector| соответственно.
 --------------  ----------------------------------------------------------------------------------------------
     **Пример**  None
 ==============  ==============================================================================================
@@ -555,5 +554,19 @@ VHDL coding guidelines
 .. |genetic map| replace:: *genetic map*
 
 .. |port map| replace:: *port map*
+
+.. Типы данных языка VHDL
+
+.. |std_logic| replace:: *std_logic*
+
+.. |std_logic_vector| replace:: *std_logic_vector*
+
+.. |std_ulogic| replace:: *std_ulogic*
+
+.. |std_ulogic_vector| replace:: *std_ulogic_vector*
+
+.. |bit| replace:: *bit*
+
+.. |bit_vector| replace:: *bit_vector*
 
 .. Вспомогательные конструкции
